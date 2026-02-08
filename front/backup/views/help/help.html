@@ -1,0 +1,902 @@
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <div
+      id="ik8a"
+      class="col-4 h-100 overflow-auto bg-secondary-subtle col-xl-3 col-lg-3 d-md-none d-sm-none d-none d-lg-block col-xxl-3 ps-xxl-5 ps-5 pt-5 pb-5"
+    >
+      <nav
+        id="navbar"
+        class="h-100 flex-column align-items-stretch pe-4 border-end"
+      >
+        <span id="i0vidu" class="fw-bold">Backup plugin</span>
+        <nav id="ii1vs" class="nav flex-column mt-2">
+          <a href="#usage" id="iv2hh" class="nav-link">Usage</a>
+          <nav id="iny9o2" class="nav flex-column">
+            <a href="#usage-settings" id="igugwj" class="nav-link ms-2 my-1">
+              Plain Javascript
+            </a>
+            <a
+              href="#component-section"
+              id="component-link"
+              class="nav-link ms-2 my-1"
+            >
+              &lt;ag-grid&gt; component
+            </a>
+            <a
+              href="#default-column"
+              id="default-column-link"
+              class="nav-link ms-2 my-1"
+            >
+              Default column
+            </a>
+            <a
+              href="#grid-events"
+              id="grid-events-link"
+              class="nav-link ms-2 my-1"
+            >
+              Grid events
+            </a>
+            <a href="#i9omff" id="imglsl" class="nav-link ms-2 my-1">
+              CopyRenderer
+            </a>
+            <a
+              href="#usage-send-message"
+              id="imglfsl"
+              class="nav-link ms-2 my-1"
+            >
+              ViewZ integration
+            </a>
+            <a href="#iaks6hq" id="imgslsl" class="nav-link ms-2 my-1">
+              ViewZ: rendering inside the column
+            </a>
+            <a
+              href="#viewz-get-row-data"
+              id="viewz-get-row-data-link"
+              class="nav-link ms-2 my-1"
+            >
+              ViewZ: get row data
+            </a>
+            <a
+              href="#viewz-grid-event"
+              id="viewz-grid-event-link"
+              class="nav-link ms-2 my-1"
+            >
+              ViewZ: grid event
+            </a>
+            <a
+              href="#db-configure-column"
+              id="db-configure-column-link"
+              class="nav-link ms-2 my-1"
+            >
+              Database: configure column from database
+            </a>
+            <a href="#i8stsi" id="imgslsl-2" class="nav-link ms-2 my-1">
+              Database: editable column from database
+            </a>
+            <a
+              href="#db-data-source"
+              id="db-data-source-link"
+              class="nav-link ms-2 my-1"
+            >
+              Database: data source
+            </a>
+            <a href="#visual-editor" id="i0mp5y" class="nav-link ms-2 my-1">
+              Visual editor
+            </a>
+          </nav>
+        </nav>
+        <nav id="ii1vs-2" class="nav flex-column mt-2">
+          <a href="#extensions" id="iv2hh-2" class="nav-link">Extensions</a>
+          <nav id="iomcst" class="nav flex-column">
+            <a href="#i8stsi-2" id="imgslsl-2-2" class="nav-link ms-2 my-1">
+              How to register an extension
+            </a>
+            <a href="#ijjqpn" id="imglsl-2" class="nav-link ms-2 my-1">
+              Add new components
+            </a>
+            <a
+              href="#dynamic-components"
+              id="dynamic-components-link"
+              class="nav-link ms-2 my-1"
+            >
+              Add dynamic components
+            </a>
+            <a
+              href="#transform-column"
+              id="transform-column-link"
+              class="nav-link ms-2 my-1"
+            >
+              Transform column option
+            </a>
+            <a
+              href="#extends-aggrid"
+              id="extends-aggrid-link"
+              class="nav-link ms-2 my-1"
+            >
+              Extends &lt;ag-grid&gt;
+            </a>
+          </nav>
+        </nav>
+      </nav>
+    </div>
+    <div
+      id="ih5ah"
+      class="h-100 overflow-auto col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 col-xxl-9 pt-5 ps-5 pb-5 pe-5"
+    >
+      <div
+        data-bs-spy="scroll"
+        data-bs-target="#navbar"
+        data-bs-smooth-scroll="true"
+        class="row"
+      >
+        <div id="usersApi" class="col-12">
+          <h3 id="i67er">Backup plugin</h3>
+          <p id="ioyf2">This plugin manage backup of the application</p>
+        </div>
+        <div id="backOffice" class="col-12">
+          <h4 id="usage">Usage</h4>
+          <p>This section describe how to use the plugin to manage backups</p>
+        </div>
+        <div id="backOffice-settings" class="col-12">
+          <h5 id="iiwmc">Settings</h5>
+          <p id="if83i">
+            The users plugin behave accordingly to its settings. Its setting is
+            made inside the table
+            <code>users.settings</code>
+            <br />
+          </p>
+          <p id="iwyk6">The possible settings are :&nbsp;</p>
+          <table id="ij17q8" class="table">
+            <thead>
+              <tr>
+                <th scope="col" id="i1g54k">Setting</th>
+                <th scope="col" id="ihg1p2">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="i13w4v">
+                <td><code id="ie92bw">expire_delay</code></td>
+                <td>
+                  The delay in minute after which the backup expired and its
+                  backup file is deleted. Default:
+                  <code id="ix2waj">60</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="ih3dpx" class="row">
+            <div id="i2z6wt" class="col-12 col-lg-6">
+              <h5 id="izc0zx">Change your settings</h5>
+              <div class="mb-3">
+                <label for="formInput1" class="form-label">
+                  Expiration delay
+                </label>
+                <input
+                  type="number"
+                  id="formInput1"
+                  z-bind="settings.expire_delay"
+                  class="form-control"
+                />
+              </div>
+              <div
+                z-show-if="!message_templates &amp;&amp; settings.public_creation &amp;&amp; (!settings.active_on_creation || settings.allow_reset_password)"
+                id="icbvvj"
+              ></div>
+              <button
+                type="button"
+                z-on-click="view.saveSettings()"
+                id="i1qmxv"
+                class="btn btn-primary w-100"
+              >
+                <span>Save settings</span>
+              </button>
+            </div>
+            <div id="ih6m7j" class="col-12 col-lg-6">
+              <h6>Source code</h6>
+              <code lang="js">
+                <pre>
+//example in code
+
+//read the settings
+const settings = await dbApi.db.backup.settings.searchFirst();
+
+// do some modification
+settings.expire_delay = 75;
+
+
+//save the new settings
+await dbApi.db.backup.settings.updateById(settings.id, settings) ;
+
+    </pre
+                >
+              </code>
+            </div>
+          </div>
+        </div>
+        <div id="backOffice-settings-2" class="col-12">
+          <h5 id="usage-settings">Start a backup</h5>
+          <p id="if83i-2">
+            To start a backup, create a record in the table
+            <code>backup.backup</code>
+          </p>
+          <p id="iwgwg">
+            You must provide the
+            <code>type</code>
+            of the backup
+          </p>
+          <div id="iij56k-2" class="row">
+            <div id="ibenpa" class="col-12 col-lg-6">
+              <h6>Example</h6>
+              <div class="mb-3">
+                <label for="formInput1" class="form-label">
+                  Type of backup
+                </label>
+                <select
+                  type="text"
+                  id="is3i3j"
+                  z-bind="type"
+                  class="form-control form-select"
+                >
+                  <option value="database">Database</option>
+                  <option value="sources">Sources</option>
+                </select>
+              </div>
+              <button
+                type="button"
+                id="ifpzf6"
+                z-on-click="view.startBackup()"
+                class="btn btn-primary w-100"
+              >
+                <span id="i3syju">Start backup</span>
+              </button>
+            </div>
+            <div id="ijj4di" class="col-12 col-lg-6">
+              <h6>Source code</h6>
+              <code lang="javascript">
+                <pre id="ioyhdi-2">
+// start the backup of type database
+const backup = await dbApi.db.backup.backup.create({type: "database"}) ;
+
+// it returns the backup object with its technical id
+dialogs.info(`The backup id ${backup._id} will now run in background.`) ;
+    </pre
+                >
+              </code>
+            </div>
+          </div>
+        </div>
+        <div id="component-section" class="col-12">
+          <h5 id="component-heading" class="mt-4">View backups</h5>
+          <p id="ibxqbj">
+            All backup are listed in the table
+            <code>backup.backup</code>
+            with the following informations :&nbsp;
+          </p>
+          <table id="ibfvxi-2" class="table">
+            <tbody id="ictakx-2">
+              <tr id="iicubh-2">
+                <th id="i5u88l-2">Attribute</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td><code>_id</code></td>
+                <td>Unique id</td>
+              </tr>
+              <tr>
+                <td><code>create_time</code></td>
+                <td>Backup request create time</td>
+              </tr>
+              <tr>
+                <td><code>start_time</code></td>
+                <td>Backup start time</td>
+              </tr>
+              <tr>
+                <td><code>end_time</code></td>
+                <td>Backup end time</td>
+              </tr>
+              <tr>
+                <td><code>type</code></td>
+                <td>Type of backup</td>
+              </tr>
+              <tr>
+                <td><code>status</code></td>
+                <td>
+                  Status of the back (
+                  <code>todo</code>
+                  ,
+                  <code>inprogress</code>
+                  ,
+                  <code>done</code>
+                  ,
+                  <code>failed</code>
+                  )
+                </td>
+              </tr>
+              <tr>
+                <td><code>file_path</code></td>
+                <td>Backup file path</td>
+              </tr>
+              <tr>
+                <td><code>error</code></td>
+                <td>Error message</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="ib95ih">
+            All event on backup are saved into the table&nbsp;
+            <code>backup.backup_log</code>
+          </p>
+          <p id="izg8fj">
+            In the log, there is the following informations :&nbsp;
+          </p>
+          <table id="ivqtpq" class="table">
+            <thead id="i2e40x">
+              <tr id="isqj0t">
+                <th scope="col" id="id9skj">Field</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>create_time</code></td>
+                <td id="i90hez">The log creation time</td>
+              </tr>
+              <tr>
+                <td><code>backup_id</code></td>
+                <td>The id of the message</td>
+              </tr>
+              <tr>
+                <td><code>type</code></td>
+                <td>The type of log</td>
+              </tr>
+              <tr>
+                <td><code>message</code></td>
+                <td>The log description</td>
+              </tr>
+              <tr>
+                <td><code>data</code></td>
+                <td>Data linked to the event (depends on the backup)</td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="i8grlo-3" class="row">
+            <div id="iw0ozu-3" class="col-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Create date</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Start time / End time</th>
+                    <th scope="col">File path / error</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr z-bind="backup of backups">
+                    <td>
+                      <db-value
+                        db-schema="backup"
+                        db-table="backup"
+                        db-column="create_time"
+                        z-bind="backup.create_time"
+                      ></db-value>
+                    </td>
+                    <td>${backup.type}</td>
+                    <td>
+                      <span
+                        z-class="text-bg-${backup.status=='failed'?'danger':(backup.status=='done'?'success':'secondary')}"
+                        class="badge"
+                      >
+                        ${backup.status}
+                      </span>
+                    </td>
+                    <td>
+                      <div>
+                        <db-value
+                          db-schema="backup"
+                          db-table="backup"
+                          db-column="start_time"
+                          z-bind="backup.start_time"
+                        ></db-value>
+                      </div>
+                      <div>
+                        <db-value
+                          db-schema="backup"
+                          db-table="backup"
+                          db-column="end_time"
+                          z-bind="backup.end_time"
+                        ></db-value>
+                      </div>
+                    </td>
+                    <td>${backup.file_path} ${backup.error}</td>
+                    <td>
+                      <a
+                        id="ijq7qqv"
+                        z-link-type="inner"
+                        href="/*(!x*/backup-details/${backup._id}"
+                        class="btn btn-outline-primary btn-sm m-1"
+                      >
+                        Details
+                      </a>
+                      <button
+                        type="button"
+                        id="icppj3-2"
+                        z-on-click="view.deleteBackup(backup)"
+                        z-bind=""
+                        z-show-if="backup.status === 'done'"
+                        class="btn btn-sm m-1 btn-danger"
+                      >
+                        Delete
+                      </button>
+                      <button
+                        type="button"
+                        z-on-click="view.downloadBackup(backup)"
+                        id="is1ner"
+                        z-show-if="backup.status === 'done'"
+                        class="btn btn-primary btn-sm m-xxl-1 m-1"
+                      >
+                        Download
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div id="i9omff" class="col-12">
+          <h5 id="usage-smtp-settings" class="mt-4">Backup types</h5>
+          <p id="iquwo8">
+            By default, 2 backup type are provided : the
+            <code>database</code>
+            and the
+            <code>sources</code>
+            backups
+          </p>
+          <h6 class="mt-4">Database backup</h6>
+          <p>
+            The
+            <code>database</code>
+            backup type backups the database
+          </p>
+          <p>
+            The created backup file is a postgresql dump (created by
+            <code>pg_dump</code>
+            command) it also include the
+            <code>ROLE</code>
+            of the application
+          </p>
+          <p>
+            When restore, the existing schema are dropped and the dump is
+            applied
+          </p>
+          <h6 class="mt-4">Sources backup</h6>
+          <p>
+            The
+            <code>sources</code>
+            backup type backups the sources code
+          </p>
+          <p>
+            It create a
+            <code>tar.gz</code>
+            archive of the directory containing the source code
+          </p>
+          <p>
+            When restore, the archive is exctracted and replace the existing the
+            sources folder
+          </p>
+          <p>
+            Note : restoring backup also override the source history (
+            <code>git</code>
+            history). The history is restored from the backup
+          </p>
+        </div>
+        <div id="i3l7c7" class="col-12">
+          <h5 class="mt-4">Restore</h5>
+          <p id="if83i-2-2">
+            To restore a backup, call the
+            <code>/open-bamz-backup/upload_restore/:appName/:type</code>
+            URL in POST with
+          </p>
+          <ul>
+            <li>
+              in URL
+              <code>:appName</code>
+              : name of the application (use
+              <code>BAMZ_APP</code>
+              to get current app name)
+            </li>
+            <li>
+              in URL
+              <code>:type</code>
+              : the type of backup used (ex:
+              <code>database</code>
+              ,
+              <code>source</code>
+              )
+            </li>
+            <li>
+              multipart/form
+              <code>file</code>
+              : the file to restore
+            </li>
+          </ul>
+          <p></p>
+          <div id="iij56k-2-2" class="row">
+            <div id="ibenpa-2" class="col-12 col-lg-6">
+              <h6>Example</h6>
+              <div id="if25jo-2" class="mb-3">
+                <label for="formInput1" class="form-label">
+                  Type of backup
+                </label>
+                <select
+                  type="text"
+                  id="is3i3j-2"
+                  z-bind="type"
+                  class="form-control form-select"
+                >
+                  <option value="database">Database</option>
+                  <option value="sources">Sources</option>
+                </select>
+              </div>
+              <div id="ihrgcg" class="mb-3">
+                <label for="formInput1-2" class="form-label">
+                  File to restore
+                </label>
+                <input
+                  type="file"
+                  id="formInput1-2"
+                  z-bind="restore_file"
+                  class="form-control"
+                />
+              </div>
+              <button
+                type="button"
+                id="ifpzf6-2"
+                z-on-click="view.restoreBackup()"
+                class="btn btn-primary w-100"
+              >
+                <span id="i3syju-2">Restore backup</span>
+              </button>
+            </div>
+            <div id="ijj4di-2" class="col-12 col-lg-6">
+              <h6>Source code</h6>
+              <code lang="javascript">
+                <pre id="ioyhdi-2-2">
+// if need import the BamZ client
+import BamzClient from "/bamz-lib/bamz-client.mjs";
+const bamz = new BamzClient() ;
+
+//if you are running in a ViewZ view, you don't need
+
+// do a multipart post with the file
+const restoreRecord = await bamz.multipartPost(
+  `/open-bamz-backup/upload_restore/${window.BAMZ_APP}/${backupType}`, 
+  { file: chosenFile } ) ; 
+// chosenFile is a File (from a input type file for example)
+
+// it returns the backup object with its technical id
+dialogs.info(`The restore id ${restoreRecord._id} will now run in background.`) ;
+    </pre
+                >
+              </code>
+            </div>
+          </div>
+        </div>
+        <code></code>
+        <div id="component-section-2" class="col-12">
+          <h5 id="component-heading-2" class="mt-4">View restore</h5>
+          <p id="ibxqbj-2">
+            All restores are listed in the table
+            <code>backup.restore</code>
+            with the following informations :&nbsp;
+          </p>
+          <table id="ibfvxi-2-2" class="table">
+            <tbody id="ictakx-2-2">
+              <tr id="iicubh-2-2">
+                <th id="i5u88l-2-2">Attribute</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td><code>_id</code></td>
+                <td>Unique id</td>
+              </tr>
+              <tr>
+                <td><code>create_time</code></td>
+                <td>Backup request create time</td>
+              </tr>
+              <tr>
+                <td><code>start_time</code></td>
+                <td>Backup start time</td>
+              </tr>
+              <tr>
+                <td><code>end_time</code></td>
+                <td>Backup end time</td>
+              </tr>
+              <tr>
+                <td><code>type</code></td>
+                <td>Type of backup</td>
+              </tr>
+              <tr>
+                <td><code>status</code></td>
+                <td>
+                  Status of the restore (
+                  <code>todo</code>
+                  ,
+                  <code>inprogress</code>
+                  ,
+                  <code>done</code>
+                  ,
+                  <code>failed</code>
+                  )
+                </td>
+              </tr>
+              <tr>
+                <td><code>file_path</code></td>
+                <td>Backup file path</td>
+              </tr>
+              <tr>
+                <td><code>error</code></td>
+                <td>Error message</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="ib95ih-2">
+            All event on restore are saved into the table&nbsp;
+            <code>backup.restore_log</code>
+          </p>
+          <p id="izg8fj-2">
+            In the log, there is the following informations :&nbsp;
+          </p>
+          <table id="ivqtpq-2" class="table">
+            <thead id="i2e40x-2">
+              <tr id="isqj0t-2">
+                <th scope="col" id="id9skj-2">Field</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>create_time</code></td>
+                <td id="i90hez-2">The log creation time</td>
+              </tr>
+              <tr>
+                <td><code>backup_id</code></td>
+                <td>The id of the message</td>
+              </tr>
+              <tr>
+                <td><code>type</code></td>
+                <td>The type of log</td>
+              </tr>
+              <tr>
+                <td><code>message</code></td>
+                <td>The log description</td>
+              </tr>
+              <tr>
+                <td><code>data</code></td>
+                <td>Data linked to the event (depends on the backup)</td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="i8grlo-3-2" class="row">
+            <div id="iw0ozu-3-2" class="col-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Create date</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Start time / End time</th>
+                    <th scope="col">File path / error</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr z-bind="restore of restores">
+                    <td>
+                      <db-value
+                        db-schema="backup"
+                        db-table="restore"
+                        db-column="create_time"
+                        z-bind="restore.create_time"
+                      ></db-value>
+                    </td>
+                    <td>${restore.type}</td>
+                    <td>
+                      <span
+                        z-class="text-bg-${restore.status=='failed'?'danger':(restore.status=='done'?'success':'secondary')}"
+                        class="badge"
+                      >
+                        ${restore.status}
+                      </span>
+                    </td>
+                    <td>
+                      <div>
+                        <db-value
+                          db-schema="backup"
+                          db-table="restore"
+                          db-column="start_time"
+                          z-bind="restore.start_time"
+                        ></db-value>
+                      </div>
+                      <div>
+                        <db-value
+                          db-schema="backup"
+                          db-table="restore"
+                          db-column="end_time"
+                          z-bind="restore.end_time"
+                        ></db-value>
+                      </div>
+                    </td>
+                    <td>${restore.file_path} ${restore.error}</td>
+                    <td>
+                      <a
+                        id="ijq7qqv-2"
+                        z-link-type="inner"
+                        href="/*(!x*/restore-details/${restore._id}"
+                        class="btn btn-outline-primary btn-sm m-1"
+                      >
+                        Details
+                      </a>
+                      <button
+                        type="button"
+                        z-on-click="view.downloadRestore(restore)"
+                        id="is1ner-2"
+                        z-show-if="restore.status === 'todo' || restore.status === 'inprogress' "
+                        class="btn btn-primary btn-sm m-xxl-1 m-1"
+                      >
+                        Download
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div id="extensions" class="col-12">
+          <h4 class="mt-5">Extensions</h4>
+          <p>It is possible to add extension to the backup system</p>
+        </div>
+        <div id="ixz2iw-2" class="col-12">
+          <h5 class="mt-4">Configure the database backup</h5>
+          <p>
+            The
+            <code>database</code>
+            backup type dump the database structure and data. Some technical
+            schema are ignored (such as the
+            <code>backup</code>
+            schema which contains the backup managment itself)
+          </p>
+          <p>
+            If you create a schema in a plugin a wish that some schema to be
+            ignored, you can register them like this :
+          </p>
+          <code lang="javascript">
+            <pre id="ioyhdi-2-2-3">
+export const initPlugin = async ({onPluginLoad}) =&gt; {
+  // in the onPluginLoad
+  onPluginLoad(async ({pluginsData})=&gt;{
+     if(pluginsData?.["open-bamz-backup"]?.pluginSlots?.backupDatabaseExcludeSchemas){
+       // register "myschema" to be excluded from the database backup
+       pluginsData?.["open-bamz-backup"]?.pluginSlots?.backupDatabaseExcludeSchemas.push("myschema")
+     }
+  })
+}
+    </pre
+            >
+          </code>
+        </div>
+        <div id="iz1w28" class="col-12">
+          <h5 id="ilkn2j" class="mt-4">Add new backup type</h5>
+          <p id="ido50h">In your plugin, you can register a new backup type</p>
+          <p id="igfzox">
+            Register your backuper in
+            <code>initPlugin</code>
+            :&nbsp;
+          </p>
+          <code lang="javascript">
+            <pre>
+export const initPlugin = async ({onPluginLoad}) =&gt; {
+  // in the onPluginLoad
+  onPluginLoad(async ({pluginsData})=&gt;{
+      if(pluginsData?.["open-bamz-backup"]?.pluginSlots?.backupers){
+          pluginsData?.["open-bamz-backup"]?.pluginSlots?.backupers.push( {
+              type: "mytype",
+              backup: myTypeBackup,
+              restore: myTypeRestore,
+          }) ;
+      }
+  })
+}
+    </pre
+            >
+          </code>
+          <p>
+            To implement the backup, you must implements the
+            <code>backup</code>
+            and
+            <code>restore</code>
+          </p>
+          <code lang="javascript">
+            <pre>
+async function myTypeBackup({backup, appName, query, logger, io}) {
+  // my backup implementation
+
+  // backup is the backup record
+  // appName is the application name
+  // query is a function to run a query in database
+  // logger is a system logger
+  // io is the socket.io instance
+
+  // by convention, we put the backups in the application backup directory
+  const backupDir = path.join(process.env.DATA_DIR, "backups", appName);
+
+  // put the file in a sub directory type/backupid/
+  const filePath = path.join(backup.type, backup._id, `mybackup_${appName}_${new Date().toISOString().replace(/[T:.]/g, "-")}.ext`) ;
+
+  // the full path
+  const backupFullPath = path.join(backupDir, filePath) ;
+
+  // create the directory if not exists
+  await fs.mkdir(path.dirname(backupFullPath), { recursive: true });
+
+  //... implements your backup ...
+
+  //if you want to notify through socket.io, use io
+  //by convention, prefix all event by the appName
+  io().to(`${appName}-backup`).emit("backup-updated", backup);
+
+  //if you want to insert a log to the backup
+  await query(`INSERT INTO backup.backup_log(backup_id, type, message, data) 
+                VALUES ($1, $2, $3, $4)`, 
+                [backup.id, "event_type", "Description", {some: data}]);
+
+
+  // returns the filePath of the created file (relative to backups/appName)
+  return { filePath: filePath }
+}
+  </pre
+            >
+          </code>
+          <p></p>
+          <code lang="javascript">
+            <pre>
+async function myTypeRestore({restore, appName, query, logger, io}) {
+  // my restore implementation
+
+  // restore is the restore record
+  // appName is the application name
+  // query is a function to run a query in database
+  // logger is a system logger
+  // io is the socket.io instance
+
+  // by convention, we put the backups in the application backup directory
+  const backupDir = path.join(process.env.DATA_DIR, "backups", appName);
+  // the full path
+  const backupFullPath = path.join(backupDir, restore.file_path) ;
+
+  //... implements your restore ...
+
+  //if you want to notify through socket.io, use io
+  //by convention, prefix all event by the appName
+  io().to(`${appName}-backup`).emit("restore-updated", restore);
+
+  //if you want to insert a log to the restore
+  await query(`INSERT INTO backup.restore_log(restore_id, type, message, data) 
+                VALUES ($1, $2, $3, $4)`, 
+                [restore.id, "event_type", "Description", {some: data}]);
+
+
+  // returns data if you want
+  return { }
+}
+  </pre
+            >
+          </code>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

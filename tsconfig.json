@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "lib": [ "es2024", "dom" ],
+    "module": "esnext",
+    "strict": false,
+    "allowJs": true,
+    "checkJs": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "$$ts-jest$$",
+    "moduleResolution": "node",
+    "types": ["node"]
+  },
+  "include": [
+    "**/*.js",
+    "**/*.mjs",
+    "**/*.d.ts"
+  ]
+}

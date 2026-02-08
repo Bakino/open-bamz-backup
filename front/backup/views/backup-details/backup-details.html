@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <span class="text-secondary">Create date :</span>
+      <span>${DBFORMAT|backup.backup.create_time|backup.create_time}</span>
+    </div>
+    <div class="col-12">
+      <span class="text-secondary">Type :</span>
+      <span>${backup.type}</span>
+    </div>
+    <div class="col-12">
+      <span class="text-secondary">Status :</span>
+      <span>${backup.status}</span>
+    </div>
+    <div class="col-12">
+      <span class="text-secondary">Start date :</span>
+      <span>${DBFORMAT|backup.backup.start_time|backup.start_time}</span>
+    </div>
+    <div class="col-12">
+      <span class="text-secondary">End date :</span>
+      <span>${DBFORMAT|backup.backup.end_time|backup.end_time}</span>
+    </div>
+    <div class="col-12">
+      <span class="text-secondary">File path :</span>
+      <span>${backup.file_path}</span>
+    </div>
+    <div class="col-12">
+      <span class="text-secondary">Error :</span>
+      <span>${backup.error}</span>
+    </div>
+    
+    <div class="col-12">
+
+      <ul class="list-group">
+        <li id="ilfp4" z-bind="log of logs" class="list-group-item">
+          <div id="ix4mz" class="d-flex">
+            <div id="i2bex">
+              ${DBFORMAT|backup.backup_log.create_time|log.create_time}
+            </div>
+            <div id="iblk9" class="ms-auto">
+                <span
+                            z-class="text-bg-${log.type=='error'?'danger':(log.type=='done'?'success':'secondary')}"
+                            class="badge"
+                          >
+                ${log.type}</span></div>
+          </div>
+          <div>${log.message}</div>
+          <div>${DBFORMAT|backup.backup_log.data|log.data}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

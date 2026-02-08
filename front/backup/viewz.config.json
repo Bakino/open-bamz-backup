@@ -1,0 +1,36 @@
+{
+  "routing": "HASH",
+  "viewsPath": "views",
+  "routes": [
+    {
+      "url": "/",
+      "path": "root",
+      "subRoutes": [
+        {
+          "url": "/help",
+          "path": "help"
+        },
+        {
+          "url": "/welcome",
+          "path": "welcome",
+          "defaultChild": true
+        }
+      ]
+      
+    },
+    {
+        "url": "/backup-details/:id",
+        "path": "backup-details"
+      },
+      {
+        "url": "/restore-details/:id",
+        "path": "restore-details"
+      }
+  ],
+  "extensions": [
+    { "url": "https://cdn.jsdelivr.net/gh/Bakino/open-bamz-database@7704feed224eebf5e9d6b6967edaf6aa572ddf3e/front/lib/viewz-dbadmin.mjs" },
+    { "url": "https://cdn.jsdelivr.net/gh/Bakino/open-bamz-bootstrap@latest/front/lib/viewz-bootstrap5.mjs" },
+    { "url": "https://cdn.jsdelivr.net/gh/Bakino/open-bamz-ag-grid@latest/front/lib/viewz-ag-grid.mjs" },
+    { "url": "/plugin/open-bamz-viewz/lib/viewz-bamz.mjs" }
+  ]
+} 
